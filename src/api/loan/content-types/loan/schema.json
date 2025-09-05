@@ -25,6 +25,10 @@
     },
     "devolutionDate": {
       "type": "date"
+    },
+    "isReturned": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

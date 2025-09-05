@@ -454,6 +454,7 @@ export interface ApiLoanLoan extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     devolutionDate: Schema.Attribute.Date;
+    isReturned: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::loan.loan'> &
       Schema.Attribute.Private;
