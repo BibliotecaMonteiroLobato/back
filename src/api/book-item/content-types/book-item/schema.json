@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "book_items",
+  "info": {
+    "singularName": "book-item",
+    "pluralName": "book-items",
+    "displayName": "BookItem"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "loans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::loan.loan",
+      "mappedBy": "book_item"
+    },
+    "book": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::book.book",
+      "inversedBy": "book_items"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "singularName": "book",
+    "pluralName": "books",
+    "displayName": "Book"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "book_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::book-item.book-item",
+      "mappedBy": "book"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "loans",
+  "info": {
+    "singularName": "loan",
+    "pluralName": "loans",
+    "displayName": "Loan"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "loans"
+    },
+    "book_item": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::book-item.book-item",
+      "inversedBy": "loans"
+    },
+    "devolutionDate": {
+      "type": "date"
+    }
+  }
+}
